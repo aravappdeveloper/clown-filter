@@ -23,7 +23,7 @@ function draw(){
     fill('red');
     stroke('red');
     //circle(noseX, noseY, 20); (this is just to show what you would do just in case you can't use an image)
-    image(clown_nose, noseX, noseY, 30, 30);
+    image(clown_nose, noseX, noseY, 45, 45);
 }
 
 function take_snapshot(){
@@ -37,8 +37,8 @@ function modelLoaded(){
 function gotPoses(results){
     if(results.length > 0){
         console.log(results);
-        noseX = results[0].pose.nose.x;
-        noseY = results[0].pose.nose.y;
+        noseX = results[0].pose.nose.x - 15;
+        noseY = results[0].pose.nose.y - 15;
         console.log("Nose x = " + noseX);
         console.log("Nose y = " + noseY);
     }
